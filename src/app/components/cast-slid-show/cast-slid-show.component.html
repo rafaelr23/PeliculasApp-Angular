@@ -1,0 +1,15 @@
+<div class="swiper-container">
+    <span slot="container-start">Container Start</span>
+    <div class="swiper-wrapper">
+        <div class="swiper-slide text-white text-center mb-5 " *ngFor="let actor of cast" [ngStyle]="{'max-width':'100px','max-height':'300px'}">
+
+
+            <img [src]="actor.profile_path | poster" [alt]="actor.name" class="img-thumbnail">
+
+            <h5>{{actor.name}}</h5>
+
+        </div>
+
+        <span slot="container-end">Container End</span>
+    </div>
+</div>
